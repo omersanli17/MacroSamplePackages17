@@ -15,16 +15,16 @@ And also XCTestCase for each cases
 
 ## SPECIAL THANKS TO
 
-Antoine v.d. Swiftlee
-Ömer Ulusal
-Alex Hoppen
-Tim Wang
-강수진, sujinnaljin, Presentation at KDWC23
-Kishikawa Katsumi
-Nicola Lancellotti
-Matt Rothenberg
-B. Royal Gordon
-Anıl Taşkıran
-Jullian Mercier
-Pedro Rojas
-Maxim Krouk
+Antoine v.d. Swiftlee, 
+Ömer Ulusal,
+Alex Hoppen - WWDC23 Session,
+Tim Wang,
+강수진, sujinnaljin - Presentation at KDWC23,
+Kishikawa Katsumi,
+Nicola Lancellotti,
+Matt Rothenberg,
+B. Royal Gordon - WWDC23 Session,
+Anıl Taşkıran,
+Jullian Mercier,
+Pedro Rojas,
+Maxim Krouk,
