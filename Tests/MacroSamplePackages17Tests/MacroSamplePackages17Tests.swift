@@ -64,6 +64,7 @@ final class MacroSamplePackages17Tests: XCTestCase {
     }
     
     // MARK: ATTACHED PEER ASYNC MACRO TEST
+    // Jullian Mercier?
     
     func testAsyncMacro() {
         assertMacroExpansion("""
