@@ -20,11 +20,14 @@ public macro URL(_ stringLiteral: String) -> URL = #externalMacro(module: "Macro
 
 // MARK: FREESTANDING DECLARATION MACRO
 @freestanding(declaration)
-macro warning(_ message: String) = #externalMacro(module: "MacroSamplePackages17Macros", type: "WarningMacro")
+macro warning(_ message: String) = #externalMacro(module: "MacroSamplePackages17Macros", type: " ingMacro")
 
 // MARK: ATTACHED PEER MACRO
 @attached(peer, names: overloaded)
 public macro AddAsync() = #externalMacro(module: "MacroSamplePackages17Macros", type: "AsyncPeerMacro")
+
+@attached(peer, names: suffixed(Publisher))
+public macro AddPublisher() = #externalMacro(module: "Macros", type: "AddPublisher")
 
 //  MARK: ATTACHED ACCESOR MACRO
 @attached(accessor)
