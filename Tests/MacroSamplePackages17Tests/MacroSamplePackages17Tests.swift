@@ -10,6 +10,7 @@ import MacroSamplePackages17Macros
 let testMacros: [String: Macro.Type] = [
     "stringify": StringifyMacro.self, // Freestanding Expression
     "AddAsync": AsyncPeerMacro.self, // Attached Peer
+    "AddPublisher": AddPublisher.self, // Attached Peer
     "URL": URLMacro.self, // Freestanding Expression
     "Access": Access.self, // ATTACHED ACCESSOR
     "DictionaryStorage": DictionaryStorageMacro.self,
@@ -83,6 +84,23 @@ final class MacroSamplePackages17Tests: XCTestCase {
                      continuation.resume(with: .success(value))
                 }
             }
+         }
+        """, macros: testMacros)
+    }
+    
+    func testCombinePublisherPeerMacro() {
+        assertMacroExpansion("""
+         struct MyType {
+             @AddPublisher
+             private let mySubject = PassthroughSubject<Void, Never>()
+         }
+        """, expandedSource: """
+         struct MyType {
+             private let mySubject = PassthroughSubject<Void, Never>()
+        
+             var mySubjectPublisher: AnyPublisher<Void, Never> {
+                 mySubject.eraseToAnyPublisher()
+             }
          }
         """, macros: testMacros)
     }
