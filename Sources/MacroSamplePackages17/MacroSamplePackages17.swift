@@ -27,7 +27,7 @@ macro warning(_ message: String) = #externalMacro(module: "MacroSamplePackages17
 public macro AddAsync() = #externalMacro(module: "MacroSamplePackages17Macros", type: "AsyncPeerMacro")
 
 @attached(peer, names: suffixed(Publisher))
-public macro AddPublisher() = #externalMacro(module: "Macros", type: "AddPublisher")
+public macro AddPublisher() = #externalMacro(module: "MacroSamplePackages17Macros", type: "AddPublisher")
 
 //  MARK: ATTACHED ACCESOR MACRO
 @attached(accessor)
